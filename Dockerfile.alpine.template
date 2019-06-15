@@ -1,5 +1,5 @@
 FROM postgres:%%PG_MAJOR%%-alpine
-MAINTAINER Régis Belson <me@regisbelson.fr>
+MAINTAINER Johannes Bühler <jonnybbb@gmail.com>
 
 ENV POSTGIS_VERSION %%POSTGIS_VERSION%%
 ENV POSTGIS_SHA256 %%POSTGIS_SHA256%%

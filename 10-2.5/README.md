@@ -7,9 +7,6 @@ The `mdillon/postgis` image provides a Docker container running Postgres with [P
 This image ensures that the default database created by the parent `postgres` image will have the following extensions installed:
 
 * `postgis`
-* `postgis_topology`
-* `fuzzystrmatch`
-* `postgis_tiger_geocoder`
 
 Unless `-e POSTGRES_DB` is passed to the container at startup time, this database will be named after the admin user (either `postgres` or the user specified with `-e POSTGRES_USER`). If you would prefer to use the older template database mechanism for enabling PostGIS, the image also provides a PostGIS-enabled template database called `template_postgis`.
 
@@ -39,13 +36,9 @@ It will update to Your newest PostGIS. Update is idempotent, so it won't hurt wh
 ```
 Updating PostGIS extensions template_postgis to X.X.X
 NOTICE:  version "X.X.X" of extension "postgis" is already installed
-NOTICE:  version "X.X.X" of extension "postgis_topology" is already installed
-NOTICE:  version "X.X.X" of extension "postgis_tiger_geocoder" is already installed
 ALTER EXTENSION
 Updating PostGIS extensions docker to X.X.X
 NOTICE:  version "X.X.X" of extension "postgis" is already installed
-NOTICE:  version "X.X.X" of extension "postgis_topology" is already installed
-NOTICE:  version "X.X.X" of extension "postgis_tiger_geocoder" is already installed
 ALTER EXTENSION
 ```
 
